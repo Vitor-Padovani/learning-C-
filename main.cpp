@@ -11,8 +11,9 @@ string print(string str) {
 int main() {
     int n;
 
-    cout << "Digite um númeroooooo" << endl;
     cin >> n;
+    cin.clear();
+    cin.ignore(1000, '\n');
 
     cout << "Eu também gosto do número " << n << endl;
 
