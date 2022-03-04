@@ -9,13 +9,21 @@ string print(string str) {
 */
 
 int main() {
-    int n;
+    int n1, n2;
 
-    cin >> n;
+    cout << "Digite um número: " << endl;
+    cin >> n1;
     cin.clear();
     cin.ignore(1000, '\n');
 
-    cout << "Eu também gosto do número " << n << endl;
+    cout << "Digite outro número: " << endl;
+    cin >> n2;
+    cin.clear();
+    cin.ignore(1000, '\n');
+
+    int sum = n1 + n2;
+
+    cout << "A soma é: " << sum << endl;
 
     return 0;
 }
