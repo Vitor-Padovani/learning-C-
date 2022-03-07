@@ -2,11 +2,6 @@
 #include <string>
 using namespace std;
 
-/*
-string print(string str) {
-    cout << str;
-}
-*/
 
 int main() {
     int n1, n2;
