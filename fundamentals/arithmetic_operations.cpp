@@ -22,8 +22,8 @@ int main() {
     float mul = x * y;
     cout << mul << endl; 
 
-    int x = 21;
-    int y = 9;
+    x = 21;
+    y = 9;
     float rem = x % y;
     cout << rem << endl; 
 
