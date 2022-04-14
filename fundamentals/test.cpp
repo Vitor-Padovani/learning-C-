@@ -1,22 +1,46 @@
-#include<cstdio>
+#include<iostream>
 
-#define length 10
+struct string {
+    char* array{};
+
+    string(char* array) {
+        this->array = array;
+    }
+
+    void read_from() {
+        std::cout << array << std::endl;
+    }
+
+    void write_to(char* character, int pos) {
+        int length = sizeof(array) / sizeof(array[0]);
+
+        if (pos > 0 && pos < length) {
+            std::cout << array << " to ";
+            array[pos] = *character;
+            std::cout << array << std::endl;
+        }
+    }
+};
+
 
 int main() {
-    int list[length][length];
-    int x = 0;
 
-    for (int i = 0; i < length; i++) {
-        for (int j = 0; j < length; j++) {
-            list[i][j] = x;
-            x++;
-        }
-    }
+    string nome{ "Vitor" };
 
-    for (int i = 0; i < length; i++) {
-        for (int j = 0; j < length; j++) {
-            printf("[%d]", list[i][j]);
-        }
-        printf("\n");
-    }
+    nome.read_from();
+
+    nome.write_to("a", 1);
+
+    /*
+      char lower[] "abc?e";
+      char upper[] = "ABC?E";
+      char* upper_ptr = upper;
+
+      lower[3] = 'd';
+      upper_ptr[3] = 'D';
+
+      char letter_d = lower[3];
+      char letter_D = upper_ptr[3];
+    */
+
 }
